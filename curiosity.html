@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Portfolio | Curiosity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL STICKY HEADER -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
+        <span>Portfolio</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">.</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center space-x-2">
+          <a href="index.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Home</a>
+          <a href="about.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">About</a>
+          <a href="projects.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Projects</a>
+          <a href="research.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Research</a>
+          <a href="curiosity.html" class="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-md transition-all">Curiosity Corner</a>
+
+        <div class="w-px h-6 bg-slate-200 mx-2"></div>
+        <a href="resume.pdf" target="_blank" class="px-4 py-2 text-sm font-semibold text-slate-700 border border-slate-300 rounded-lg hover:bg-slate-50 transition-all shadow-sm flex items-center gap-1.5">
+          Resume <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow">
+
+    <div class="bg-white border-b border-slate-200 py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Curiosity Corner</h1>
+        <p class="mt-2 text-slate-500 text-lg">Explorations and perspectives beyond traditional data modeling.</p>
+      </div>
+    </div>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1 bg-indigo-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+          <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Behavioral Systems</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Actively studying feedback loops, dopamine regulation, and self-improvement frameworks. Drawing concepts from behavioral psychology (such as <em>Dopamine Nation</em> and <em>The Four Agreements</em>) to design sustainable reward systems and master high-value social communication.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1 bg-amber-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+          <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="coffee" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Global Coffee Protocols</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Fascinated by the rigorous official quality classification systems of agricultural commodities. I maintain a detailed interest in analyzing and comparing the global green coffee grading standards specific to producing countries like Ethiopia, Kenya, and Uganda.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute top-0 left-0 w-full h-1 bg-violet-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+          <div class="w-12 h-12 bg-violet-50 text-violet-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Adrenaline & Narrative Arts</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Outside the terminal, I balance high-adrenaline outdoor pursuits across Chennai—like scuba diving and executing planned paramotoring excursions—with an appreciation for narrative world-building, particularly international slice-of-life manga publishing and the <em>One Piece</em> universe.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-indigo-50 to-violet-50 border border-indigo-100 text-indigo-700 text-sm font-semibold shadow-sm">
+        Open for Data Science &amp; Analytics Roles
+      </div>
+      
+      <div class="flex justify-center items-center gap-6 text-slate-500 pt-4">
+        <a href="mailto:contact@example.com" class="hover:text-violet-600 transition-colors p-2" aria-label="Email"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        <a href="https://github.com" target="_blank" class="hover:text-violet-600 transition-colors p-2" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-violet-600 transition-colors p-2" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+      </div>
+      <p class="text-xs text-slate-400 font-mono mt-4">&copy; <span id="year"></span> Portfolio. Crafted with HTML & Tailwind CSS.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
