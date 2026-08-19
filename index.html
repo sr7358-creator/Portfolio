@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-indigo-100 selection:text-indigo-900">
+
+  <!-- STICKY GLASSMORPHISM TOP NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
+        <span>Portfolio</span><span class="text-indigo-600">.</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+        <a href="#research" class="hover:text-indigo-600 transition-colors">Research</a>
+        <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a>
+        <a href="#curiosity" class="hover:text-indigo-600 transition-colors">Curiosity Corner</a>
+        <a href="resume.pdf" target="_blank" class="px-4 py-2 text-xs font-semibold text-slate-700 border border-slate-300 rounded-md hover:bg-slate-100 transition-all shadow-sm">
+          Resume
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-3 text-sm font-medium">
+      <a href="#about" class="block py-1 text-slate-600 hover:text-indigo-600">About</a>
+      <a href="#research" class="block py-1 text-slate-600 hover:text-indigo-600">Research</a>
+      <a href="#projects" class="block py-1 text-slate-600 hover:text-indigo-600">Projects</a>
+      <a href="#skills" class="block py-1 text-slate-600 hover:text-indigo-600">Skills</a>
+      <a href="#curiosity" class="block py-1 text-slate-600 hover:text-indigo-600">Curiosity Corner</a>
+      <a href="resume.pdf" target="_blank" class="inline-block mt-2 px-4 py-2 text-xs font-semibold text-slate-700 border border-slate-300 rounded-md">Resume</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 py-12">
+
+    <!-- HERO SECTION -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-6">
+      <!-- Left Column -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 border border-indigo-100 text-indigo-700">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+          <span>MSc Applied Data Science &amp; UG Statistics</span>
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight tracking-tight">
+          Applying Statistical Rigor to Solve Real-World Operational Problems.
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+          Hi, I'm a Data Scientist. I bridge primary statistical survey design, stochastic queueing models, and machine learning architectures to build actionable, data-backed operational solutions.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm rounded-lg shadow-sm transition-all">
+            <span>See My Work</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-medium text-sm rounded-lg shadow-sm transition-all">
+            <span>Resume</span>
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Code & Model Metrics Snapshot -->
+      <div class="lg:col-span-5">
+        <div class="bg-slate-900 rounded-xl p-5 shadow-md border border-slate-800 text-slate-200 font-mono text-xs space-y-4">
+          <!-- Terminal Header -->
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            </div>
+            <span class="text-slate-400 text-[11px]">model_pipeline.py</span>
+          </div>
+
+          <!-- Code Snippet -->
+          <div class="space-y-2 leading-relaxed">
+            <p class="text-slate-400"># Initializing Quasi-Monte Carlo Model</p>
+            <p><span class="text-indigo-400">from</span> qmc_engine <span class="text-indigo-400">import</span> FibonacciLattice</p>
+            <p><span class="text-indigo-400">from</span> sklearn.ensemble <span class="text-indigo-400">import</span> GradientBoostingRegressor</p>
+            <br>
+            <p>lattice = FibonacciLattice(dim=<span class="text-amber-300">128</span>, points=<span class="text-amber-300">100000</span>)</p>
+            <p>model = QueueTimePredictor(kernel=<span class="text-emerald-300">'stochastic'</span>)</p>
+            <p>model.fit(X_train, y_train)</p>
+          </div>
+
+          <!-- Live Output Snapshot Box -->
+          <div class="bg-slate-800/80 rounded-lg p-3 border border-slate-700/60 space-y-1.5 font-sans">
+            <div class="flex justify-between items-center text-[11px] text-slate-400">
+              <span>Model Evaluation</span>
+              <span class="text-emerald-400 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3"></i> Converged</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-1">
+              <div>
+                <span class="text-slate-400 text-[10px]">Tier Accuracy:</span>
+                <p class="text-emerald-400 font-semibold">90.2%</p>
+              </div>
+              <div>
+                <span class="text-slate-400 text-[10px]">Delay Error Bound:</span>
+                <p class="text-indigo-300 font-semibold">±0.82 hrs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EDUCATION SECTION -->
+    <section id="about" class="space-y-8">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">About &amp; Education</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Narrative Left -->
+        <div class="lg:col-span-6 space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+          <p>
+            My foundation in data science began with a rigorous undergraduate degree in Statistics. Rather than treating data as passive numbers, I was trained to design primary sampling schemes, execute field surveys, and test core probabilistic assumptions under real-world constraints.
+          </p>
+          <p>
+            Transitioning into my Master of Science in Applied Data Science, I expanded these statistical roots into predictive machine learning, high-dimensional simulation techniques, and automated pipeline engineering.
+          </p>
+          <p>
+            I specialize in bridging fundamental theory—such as queueing systems and quasi-Monte Carlo lattices—with scalable software models that streamline operations and inform decisions.
+          </p>
+        </div>
+
+        <!-- Education Cards Right -->
+        <div class="lg:col-span-6 space-y-4">
+          <!-- MSc Card -->
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+            <div class="p-3 bg-indigo-50 text-indigo-600 rounded-lg h-fit">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Postgraduate</span>
+              <h3 class="text-base font-bold text-slate-900">Master of Science in Applied Data Science</h3>
+              <p class="text-xs text-slate-500 mb-2">Focus on Machine Learning, Stochastic Modeling, and Engineering</p>
+              <p class="text-xs text-slate-600">Advanced coursework covering non-parametric statistical methods, predictive ML architectures, quasi-Monte Carlo simulations, and big data management.</p>
+            </div>
+          </div>
+
+          <!-- BSc Card -->
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+            <div class="p-3 bg-slate-100 text-slate-700 rounded-lg h-fit">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Undergraduate</span>
+              <h3 class="text-base font-bold text-slate-900">Bachelor of Science in Statistics</h3>
+              <p class="text-xs text-slate-500 mb-2">Focus on Survey Design, Hypothesis Testing &amp; Probability</p>
+              <p class="text-xs text-slate-600">Gained core mathematical training in probability theory, sampling methods, regression analysis, operations research, and experimental design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS SECTION -->
+    <section id="research" class="space-y-8">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Research &amp; Publications</h2>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 bg-indigo-50 border border-indigo-100 text-indigo-700 rounded-full text-xs font-medium">
+            Peer-Reviewed / Conference Presentation
+          </span>
+          <span class="text-xs text-slate-400 font-mono">ICCMSIS Conference</span>
+        </div>
+
+        <h3 class="text-xl font-bold text-slate-900 leading-snug">
+          Fibonacci Lattice-Based Quasi-Monte Carlo Methods for High-Dimensional Synthetic Financial Portfolio Generation
+        </h3>
+
+        <p class="text-sm text-slate-600 leading-relaxed">
+          <strong>Abstract:</strong> Standard Monte Carlo simulations suffer from slow rate of convergence ($\mathcal{O}(N^{-1/2})$) when generating high-dimensional synthetic financial portfolios. This paper explores quasi-Monte Carlo (QMC) integration using low-discrepancy Fibonacci lattices. By leveraging number-theoretic sequence properties, our methodology reduces variance and enhances sampling efficiency in multi-asset portfolio generation under non-Gaussian dependencies.
+        </p>
+
+        <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500">
+            <span>#QuasiMonteCarlo</span>
+            <span>#NumberTheory</span>
+            <span>#PortfolioSimulation</span>
+          </div>
+          <a href="#" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">
+            <span>Read Publication</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="space-y-8">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Featured Projects</h2>
+      </div>
+
+      <!-- Flagship Project Card -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+        
+        <!-- Project Context & Info -->
+        <div class="lg:col-span-7 p-6 sm:p-8 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-indigo-100 text-indigo-800">Flagship Case Study</span>
+              <span class="text-xs text-slate-400">Queue &amp; Crowd Analytics</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900">
+              Tirupati Pilgrim Flow &amp; Queue Time Predictor
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Synthesized primary sampling data collected during undergraduate statistical surveys with advanced predictive queueing models built during master's studies. The system forecasts waiting compartment bottlenecks and estimates total queue delay for pilgrim management teams.
+            </p>
+
+            <div class="flex flex-wrap gap-3 pt-1">
+              <div class="bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+                <span>90% Crowd Tier Accuracy</span>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-indigo-600"></i>
+                <span>Error-Bounded Queue Delay Model</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 text-xs font-mono text-slate-500 border-t border-slate-100">
+            <span>Python</span> • <span>Queueing Theory</span> • <span>XGBoost</span> • <span>Primary Survey Data</span>
+          </div>
+        </div>
+
+        <!-- Interactive Simulator Widget (Vanilla JS) -->
+        <div class="lg:col-span-5 bg-slate-50 p-6 border-t lg:border-t-0 lg:border-l border-slate-200 flex flex-col justify-between space-y-6">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                <i data-lucide="sliders" class="w-4 h-4 text-indigo-600"></i>
+                Live Queue Simulator
+              </h4>
+              <span class="text-[10px] text-slate-400">Interactive Model</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="space-y-4 text-xs">
+              <!-- Pilgrim Volume Slider -->
+              <div class="space-y-1">
+                <div class="flex justify-between text-slate-700 font-medium">
+                  <label for="volumeRange">Daily Footfall Volume:</label>
+                  <span id="volumeVal" class="font-mono text-indigo-600">55,000</span>
+                </div>
+                <input type="range" id="volumeRange" min="20000" max="100000" step="5000" value="55000" 
+                       class="w-full accent-indigo-600 bg-slate-200 rounded-lg h-1.5 cursor-pointer" oninput="updateQueuePrediction()">
+              </div>
+
+              <!-- Day Type Toggle -->
+              <div class="space-y-1">
+                <label for="dayType" class="block text-slate-700 font-medium">Day Classification:</label>
+                <select id="dayType" onchange="updateQueuePrediction()" class="w-full bg-white border border-slate-300 rounded-md p-2 text-xs text-slate-700 focus:ring-1 focus:ring-indigo-500 focus:outline-none">
+                  <option value="weekday">Regular Weekday</option>
+                  <option value="weekend">Weekend / Special Festival</option>
+                </select>
+              </div>
+
+              <!-- Token Status Toggle -->
+              <div class="space-y-1">
+                <label for="tokenStatus" class="block text-slate-700 font-medium">Time-Slot Token System:</label>
+                <select id="tokenStatus" onchange="updateQueuePrediction()" class="w-full bg-white border border-slate-300 rounded-md p-2 text-xs text-slate-700 focus:ring-1 focus:ring-indigo-500 focus:outline-none">
+                  <option value="issued">Tokens Issued (Regulated Flow)</option>
+                  <option value="paused">Tokens Paused / Unrestricted Queue</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prediction Output Card -->
+          <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-2">
+            <div class="text-[11px] text-slate-500 flex justify-between items-center">
+              <span>Predicted Wait Time:</span>
+              <span id="crowdTierBadge" class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-100 text-amber-800">
+                High Density
+              </span>
+            </div>
+            <div class="flex items-baseline justify-between">
+              <span id="predictedHours" class="text-3xl font-extrabold text-slate-900 font-mono">14.2 hrs</span>
+              <span id="confidenceBound" class="text-xs font-mono text-slate-500">±1.1 hrs (90% CI)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section id="skills" class="space-y-8">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Skills Matrix</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Statistical Foundations -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Statistical Foundations</h3>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Queueing Theory</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Stochastic Modeling</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Hypothesis Testing</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Survey Design &amp; Sampling</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Machine Learning & Code -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+            <i data-lucide="code-2" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Machine Learning &amp; Code</h3>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Python &amp; R</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> SQL (PostgreSQL)</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> XGBoost &amp; Scikit-Learn</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Pandas &amp; NumPy</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Visualization & BI -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+            <i data-lucide="pie-chart" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Visualization &amp; BI</h3>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Power BI</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Tableau</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Streamlit Apps</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Matplotlib &amp; Seaborn</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Tooling & Workflow -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+            <i data-lucide="terminal" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Tooling &amp; Workflow</h3>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Git &amp; GitHub Actions</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> Linux / Bash</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> LaTeX (Academic Pubs)</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600"></i> VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURIOSITY CORNER SECTION -->
+    <section id="curiosity" class="space-y-8">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Curiosity Corner</h2>
+        <p class="text-xs text-slate-500 mt-1">Explorations, niche hobbies, and analytical mental models beyond pure modeling.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Item 1 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-8 h-8 bg-amber-50 text-amber-700 rounded-md flex items-center justify-center">
+            <i data-lucide="coffee" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Coffee Quality Classification</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Analyzing East African (Ethiopia, Kenya) green coffee grading standards. Exploring how sensory scores correlate with altitude and washing process parameters.
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-8 h-8 bg-indigo-50 text-indigo-700 rounded-md flex items-center justify-center">
+            <i data-lucide="brain" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Behavioral Systems &amp; Habits</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Studying feedback loops, dopamine regulation, and principles from behavioral science to design sustainable work protocols and high-clarity communication habits.
+          </p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-8 h-8 bg-emerald-50 text-emerald-700 rounded-md flex items-center justify-center">
+            <i data-lucide="compass" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Mathematical Patterns in Nature</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Investigating Fibonacci spirals, golden ratios, and quasi-random spatial distributions both in physical biological growth and computational financial algorithms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER & CONTACT -->
+  <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold">
+        Open for Data Science &amp; Analytics Roles
+      </div>
+      
+      <p class="text-slate-600 text-sm max-w-md mx-auto">
+        Feel free to reach out for research collaborations, analytics inquiries, or just to discuss statistical modeling!
+      </p>
+
+      <!-- Social Links -->
+      <div class="flex justify-center items-center gap-6 text-slate-500 pt-2">
+        <a href="mailto:your.email@example.com" class="hover:text-indigo-600 transition-colors p-2" aria-label="Email">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+        <a href="https://github.com" target="_blank" class="hover:text-indigo-600 transition-colors p-2" aria-label="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-indigo-600 transition-colors p-2" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+      <p class="text-xs text-slate-400 font-mono pt-4">
+        &copy; <span id="year"></span> Portfolio • Built with HTML, Tailwind CSS &amp; Lucide Icons
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Set Copyright Year
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Queue Simulator Logic (Vanilla JS)
+    function updateQueuePrediction() {
+      const volume = parseInt(document.getElementById('volumeRange').value);
+      const isWeekend = document.getElementById('dayType').value === 'weekend';
+      const isTokenless = document.getElementById('tokenStatus').value === 'paused';
+
+      // Update Slider Label Display
+      document.getElementById('volumeVal').innerText = volume.toLocaleString() + ' pilgrims';
+
+      // Base formula calculation
+      let baseHours = (volume / 4200);
+      if (isWeekend) baseHours *= 1.45;
+      if (isTokenless) baseHours *= 1.70;
+
+      let hours = Math.round(baseHours * 10) / 10;
+      
+      // Determine Crowd Tier Badge
+      let crowdTier = "Moderate Flow";
+      let tierColor = "bg-emerald-100 text-emerald-800";
+
+      if (volume > 70000 || (isWeekend && volume > 50000)) {
+        crowdTier = "Peak Congestion";
+        tierColor = "bg-rose-100 text-rose-800";
+      } else if (volume > 45000 || isWeekend) {
+        crowdTier = "High Density";
+        tierColor = "bg-amber-100 text-amber-800";
+      }
+
+      // Update DOM
+      document.getElementById('predictedHours').innerText = `${hours} hrs`;
+      const tierBadge = document.getElementById('crowdTierBadge');
+      tierBadge.innerText = crowdTier;
+      tierBadge.className = `px-2 py-0.5 rounded-full text-[10px] font-semibold ${tierColor}`;
+      
+      const confidence = (hours * 0.08).toFixed(1);
+      document.getElementById('confidenceBound').innerText = `±${confidence} hrs (90% CI)`;
+    }
+  </script>
+</body>
+</html>
