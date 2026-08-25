@@ -26,18 +26,17 @@
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="index.html" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
-        <span>Portfolio</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">.</span>
+        <span>Sundar's Portfolio</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">.</span>
       </a>
       
-      <nav class="hidden md:flex items-center space-x-2">
-          <a href="index.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Home</a>
-          <a href="about.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">About</a>
-          <a href="projects.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Projects</a>
-          <a href="research.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Research</a>
-          <a href="curiosity.html" class="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-md transition-all">Curiosity Corner</a>
+      <nav class="hidden md:flex items-center space-x-1 ml-auto">
+        <a href="index.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Home</a>
+        <a href="about.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">About</a>
+        <a href="projects.html" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-slate-50 rounded-lg transition-all">Projects</a>
+        <a href="curiosity.html" class="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-md transition-all">Curiosity Corner</a>
 
         <div class="w-px h-6 bg-slate-200 mx-2"></div>
-        <a href="resume.pdf" target="_blank" class="px-4 py-2 text-sm font-semibold text-slate-700 border border-slate-300 rounded-lg hover:bg-slate-50 transition-all shadow-sm flex items-center gap-1.5">
+        <a href="resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-semibold text-sm rounded-lg shadow-md transition-all">
           Resume <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
       </nav>
@@ -103,19 +102,56 @@
 
   </main>
 
-  <!-- GLOBAL FOOTER -->
-  <footer class="bg-white border-t border-slate-200 mt-20 py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-      <div class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-indigo-50 to-violet-50 border border-indigo-100 text-indigo-700 text-sm font-semibold shadow-sm">
-        Open for Data Science &amp; Analytics Roles
+   <!-- DARK GLOBAL FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Left Side: Brand & Email -->
+        <div class="md:col-span-6 space-y-4">
+          <a href="index.html" class="text-xl font-bold text-white tracking-tight flex items-center gap-1.5">
+            <span>Sundar's Portfolio</span><span class="text-indigo-500">.</span>
+          </a>
+          <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+            Open to conversations about the data science landscape, data analysis from statistical survey design to production machine learning pipelines.
+          </p>
+          <div>
+            <a href="mailto:sundaramoo346@gmail.com" class="text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors">
+              sundaramoo346@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Placeholder Column 1 -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-semibold text-slate-200 uppercase tracking-wider">Pages</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="projects.html" class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="curiosity.html" class="hover:text-white transition-colors">Curiosity</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Side: Placeholder Column 2 -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-semibold text-slate-200 uppercase tracking-wider">Elsewhere</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="https://www.linkedin.com/in/sundar-moo/" target="_blank" class="hover:text-white transition-colors inline-flex items-center gap-1">LinkedIn <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a></li>
+            <li><a href="https://github.com/sr7358-creator" target="_blank" class="hover:text-white transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a></li>
+            <li><a href="#" target="_blank" class="hover:text-white transition-colors inline-flex items-center gap-1">Placeholder Link 3
+             <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a></li>
+            <li><a href="#" target="_blank" class="hover:text-white transition-colors inline-flex items-center gap-1">Placeholder Link 4 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a></li>
+          </ul>
+        </div>
+
       </div>
-      
-      <div class="flex justify-center items-center gap-6 text-slate-500 pt-4">
-        <a href="mailto:contact@example.com" class="hover:text-violet-600 transition-colors p-2" aria-label="Email"><i data-lucide="mail" class="w-5 h-5"></i></a>
-        <a href="https://github.com" target="_blank" class="hover:text-violet-600 transition-colors p-2" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="hover:text-violet-600 transition-colors p-2" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>&copy; <span id="year"></span> Portfolio. All rights reserved.</p>
+        <p class="font-mono">Hand-built with Gemini AI &amp; Inspired by Harrison Jansma</p>
       </div>
-      <p class="text-xs text-slate-400 font-mono mt-4">&copy; <span id="year"></span> Portfolio. Crafted with HTML & Tailwind CSS.</p>
     </div>
   </footer>
 
