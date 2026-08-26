@@ -61,18 +61,19 @@
       <!-- Flagship Project Card -->
       <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid grid-cols-1">
         
-        <div class="p-8 space-y-6 flex flex-col justify-between">
+        <div class="p-8 space-y-8 flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-3 mb-4">
               <span class="px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wide bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-sm">Flagship Showcase</span>
               <span class="text-sm font-medium text-slate-400">Queue &amp; Crowd Analytics</span>
             </div>
 
-            <h3 class="text-3xl font-bold text-slate-900 mb-4">Tirupati Pilgrim Flow &amp; Queue Time Predictor</h3>
-
-            <p class="text-slate-600 leading-relaxed mb-6">
-              This case study synthesizes primary sample data collected during my undergraduate statistical fieldwork with the advanced predictive modeling architectures developed in my Master's studies. The resulting system forecasts waiting compartment bottlenecks and provides highly accurate estimated total queue delays for operational crowd management teams.
-            </p>
+            <div>
+              <div>
+                <h3 class="text-3xl font-bold text-slate-900 mb-4">Tirupati Pilgrim Flow &amp; Queue Time Predictor</h3>
+                <p class="text-slate-600 leading-relaxed">A seven-step case study placeholder for understanding pilgrim movement, queue pressure, and estimated waiting time.</p>
+              </div>
+            </div>
 
             <div class="flex flex-wrap gap-3">
               <div class="bg-indigo-50 border border-indigo-100 px-4 py-2 rounded-lg text-sm font-semibold text-indigo-800 flex items-center gap-2">
@@ -81,9 +82,36 @@
               <div class="bg-violet-50 border border-violet-100 px-4 py-2 rounded-lg text-sm font-semibold text-violet-800 flex items-center gap-2">
                 <i data-lucide="clock" class="w-4 h-4"></i> Error-Bounded Queue Delay Model
               </div>
+              <button id="view-all-steps" type="button" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-900 hover:bg-indigo-700 text-white font-semibold text-sm rounded-lg shadow-sm transition-colors">
+                <i data-lucide="layout-list" class="w-4 h-4"></i>
+                View all steps
+              </button>
             </div>
           </div>
         </div>
+
+          <div id="step-cards-view">
+            <div id="step-scroller" class="scrollbar-hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth" aria-label="Tirupati project steps">
+              <article class="min-w-full snap-start bg-gradient-to-br from-indigo-50 via-white to-slate-50 border border-indigo-100 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-indigo-600">01 / Overview</span><h4 class="text-xl font-bold text-slate-900 mt-4">Tirupati pilgrim flow, in focus</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder hook: a concise one-line statement describing the project and the decision it is designed to support.</p></article>
+              <article class="min-w-full snap-start bg-gradient-to-br from-white via-indigo-50 to-white border border-slate-200 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-indigo-600">02 / Problem</span><h4 class="text-xl font-bold text-slate-900 mt-4">The queue-time challenge</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder description: explain the operational problem, who experiences it, and why forecasting would be useful.</p></article>
+              <article class="min-w-full snap-start bg-gradient-to-br from-slate-50 via-white to-indigo-50 border border-slate-200 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-indigo-600">03 / Data</span><h4 class="text-xl font-bold text-slate-900 mt-4">Data and collection</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder description: list the sample, collection window, variables, measurement approach, and any data-quality decisions.</p></article>
+              <article class="min-w-full snap-start bg-gradient-to-br from-violet-50 via-white to-slate-50 border border-slate-200 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-indigo-600">04 / Method</span><h4 class="text-xl font-bold text-slate-900 mt-4">Methodology</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder description: outline the features, modeling approach, training process, and evaluation strategy.</p></article>
+              <article class="min-w-full snap-start bg-gradient-to-br from-white via-violet-50 to-white border border-slate-200 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-indigo-600">05 / Evidence</span><h4 class="text-xl font-bold text-slate-900 mt-4">Results and validation</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder description: add headline metrics, validation results, error bounds, and what success means for queue operations.</p></article>
+              <article class="min-w-full snap-start bg-gradient-to-br from-slate-50 via-white to-violet-50 border border-slate-200 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-indigo-600">06 / Reflection</span><h4 class="text-xl font-bold text-slate-900 mt-4">Limitations and next steps</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder description: name the constraints, sources of uncertainty, and what you would change with more time or richer data.</p></article>
+              <article class="min-w-full snap-start bg-gradient-to-br from-violet-50 via-white to-indigo-50 border border-violet-100 rounded-xl p-6"><span class="text-xs font-bold uppercase tracking-widest text-violet-600">07 / References</span><h4 class="text-xl font-bold text-slate-900 mt-4">Proof links</h4><p class="text-slate-600 text-sm leading-relaxed mt-3">Placeholder description: add links to the repository, notebook, report, dashboard, or supporting research materials.</p></article>
+            </div>
+            <div class="flex items-center justify-center gap-5 pt-1">
+              <button id="previous-step" type="button" aria-label="Previous step" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-200 text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-colors disabled:opacity-30 disabled:pointer-events-none">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+              </button>
+              <div class="flex items-center gap-1.5" aria-label="Project step progress"><span class="step-dot w-6 h-1.5 rounded-full bg-indigo-600"></span><span class="step-dot w-1.5 h-1.5 rounded-full bg-slate-200"></span><span class="step-dot w-1.5 h-1.5 rounded-full bg-slate-200"></span><span class="step-dot w-1.5 h-1.5 rounded-full bg-slate-200"></span><span class="step-dot w-1.5 h-1.5 rounded-full bg-slate-200"></span><span class="step-dot w-1.5 h-1.5 rounded-full bg-slate-200"></span><span class="step-dot w-1.5 h-1.5 rounded-full bg-slate-200"></span></div>
+              <button id="next-step" type="button" aria-label="Next step" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition-colors">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="all-steps-view" class="hidden grid-cols-1 gap-4"><div class="text-sm font-semibold text-indigo-700">Project path / all seven steps</div><div class="flex justify-center pt-2"><button type="button" data-view-cards class="inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 font-semibold text-sm rounded-lg transition-colors"><i data-lucide="gallery-horizontal-end" class="w-4 h-4"></i> View as cards</button></div></div>
 
       </div>
       
@@ -110,11 +138,11 @@
     </section>
     
       
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
     <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Research &amp; Publications</h1>
   </div>
 
-    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
       
       <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-violet-300 transition-colors">
         
@@ -138,6 +166,7 @@
           <div class="prose prose-slate prose-sm sm:prose-base max-w-none text-slate-600">
             <p><strong>Abstract:</strong> Standard Monte Carlo simulations suffer from a slow rate of convergence when generating high-dimensional synthetic financial portfolios. This research paper explores advanced quasi-Monte Carlo (QMC) integration techniques utilizing low-discrepancy Fibonacci lattices.</p>
             <p>By leveraging specific sequence properties inherent in number theory, our methodology significantly reduces variance and enhances spatial sampling efficiency in complex, multi-asset portfolio generation under non-Gaussian dependency structures.</p>
+            <p class="mt-6"><strong>In everyday terms:</strong> Placeholder sentence explaining this research in simple, non-technical language.</p>
           </div>
 
           <div class="inline-flex items-center gap-2 px-3 py-2 bg-indigo-50 border border-indigo-100 rounded-lg text-xs font-mono text-indigo-700">
@@ -159,7 +188,7 @@
       </div>
 
     </section>
-      <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
       
       <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-violet-300 transition-colors">
         
@@ -183,6 +212,7 @@
 
           <div class="prose prose-slate prose-sm sm:prose-base max-w-none text-slate-600">
             <p><strong>Abstract:</strong> This study proposes a two-step inventory redistribution model using Bayesian forecasting, Gaussian copulas, and scenario-based Mixed-Integer Linear Programming. By capturing demand uncertainty and cross-product correlations, the framework reduces retail stockouts by 8–12% and transportation costs by 5–9%.</p>
+            <p class="mt-6"><strong>In everyday terms:</strong> Placeholder sentence explaining this research in simple, non-technical language.</p>
           </div>
 
           <div class="inline-flex items-center gap-2 px-3 py-2 bg-violet-50 border border-violet-100 rounded-lg text-xs font-mono text-violet-700">
@@ -263,7 +293,51 @@
   <script>
     lucide.createIcons();
     document.getElementById('year').innerText = new Date().getFullYear();
+
+    const stepScroller = document.getElementById('step-scroller');
+    const stepDots = document.querySelectorAll('.step-dot');
+    const stepCards = [...stepScroller.children];
+    const previousStep = document.getElementById('previous-step');
+    const nextStep = document.getElementById('next-step');
+    const cardsView = document.getElementById('step-cards-view');
+    const allStepsView = document.getElementById('all-steps-view');
+    const viewAllSteps = document.getElementById('view-all-steps');
+
+    stepScroller.addEventListener('scroll', () => {
+      const activeStep = Math.min(stepCards.length - 1, Math.max(0, Math.round(stepScroller.scrollLeft / (stepCards[0].offsetWidth + 16))));
+      stepDots.forEach((dot, index) => dot.className = index === activeStep ? 'step-dot w-6 h-1.5 rounded-full bg-indigo-600' : 'step-dot w-1.5 h-1.5 rounded-full bg-slate-200');
+      previousStep.disabled = activeStep === 0;
+      nextStep.disabled = activeStep === stepCards.length - 1;
+    });
+
+    const showStep = (stepIndex) => stepScroller.scrollTo({ left: stepIndex * (stepCards[0].offsetWidth + 16), behavior: 'smooth' });
+    previousStep.addEventListener('click', () => showStep(Math.max(0, Math.round(stepScroller.scrollLeft / (stepCards[0].offsetWidth + 16)) - 1)));
+    nextStep.addEventListener('click', () => showStep(Math.min(stepCards.length - 1, Math.round(stepScroller.scrollLeft / (stepCards[0].offsetWidth + 16)) + 1)));
+    stepScroller.scrollLeft = 0;
+    stepScroller.dispatchEvent(new Event('scroll'));
+
+    viewAllSteps.addEventListener('click', () => {
+      const showingAllSteps = !allStepsView.classList.contains('hidden');
+      cardsView.classList.toggle('hidden', !showingAllSteps);
+      allStepsView.classList.toggle('hidden', showingAllSteps);
+      allStepsView.classList.toggle('grid', !showingAllSteps);
+      viewAllSteps.innerHTML = showingAllSteps ? '<i data-lucide="layout-list" class="w-4 h-4"></i> View all steps' : '<i data-lucide="gallery-horizontal-end" class="w-4 h-4"></i> View as cards';
+      if (!showingAllSteps) allStepsView.innerHTML = '<div class="text-sm font-semibold text-indigo-700">Project path / all seven steps</div>' + stepCards.map((card) => `<article class="bg-white border border-slate-200 rounded-xl p-5"><p class="text-xs font-bold uppercase tracking-widest text-indigo-600">${card.querySelector('span').textContent}</p><h4 class="text-lg font-bold text-slate-900 mt-3">${card.querySelector('h4').textContent}</h4><p class="text-slate-600 text-sm leading-relaxed mt-2">${card.querySelector('p').textContent}</p></article>`).join('') + '<div class="flex justify-center pt-2"><button type="button" data-view-cards class="inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 font-semibold text-sm rounded-lg transition-colors"><i data-lucide="gallery-horizontal-end" class="w-4 h-4"></i> View as cards</button></div>';
+      lucide.createIcons();
+    });
+    allStepsView.addEventListener('click', (event) => {
+      if (event.target.closest('[data-view-cards]')) viewAllSteps.click();
+    });
   </script>
+  <style>
+    .scrollbar-hidden {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 
 </body>
 </html>
